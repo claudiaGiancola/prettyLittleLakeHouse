@@ -2,8 +2,7 @@
 To use this project install `npm install` and `npm install react-bootstrap bootstrap`
 
 Run the project with
-`npm run dev` or `npm run`
-
+`npm run dev`
 
 
 ***** default README below *****
