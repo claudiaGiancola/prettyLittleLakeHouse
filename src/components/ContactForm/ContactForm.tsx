@@ -1,14 +1,10 @@
 import './ContactForm.scss';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 function ContactForm() {
-    const form = useRef(null);
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [object, setObject] = useState("");
-    const [message, setMessage] = useState("");
+    const form = useRef(null);
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
@@ -35,24 +31,18 @@ function ContactForm() {
                 <input
                     type="text"
                     name="name"
-                    value={name || ""}
-                    onChange={(e) => setName(e.target.value)}
                 />
             </label>
             <label>Your Email
                 <input
                     type="email"
                     name="email"
-                    value={email || ""}
-                    onChange={(e) => setEmail(e.target.value)}
                 />
             </label>
             <label>Object
                 <input
                     type="text"
                     name="object"
-                    value={object || ""}
-                    onChange={(e) => setObject(e.target.value)}
                 />
             </label>
             <label>Your Message
@@ -60,8 +50,6 @@ function ContactForm() {
                     name="message"
                     rows={4}
                     cols={30}
-                    value={message || ""}
-                    onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
             </label>
             <input type="submit" />
