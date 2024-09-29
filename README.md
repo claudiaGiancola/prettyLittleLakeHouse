@@ -1,8 +1,12 @@
 # How to use this project
-To use this project install `npm install` and `npm install react-bootstrap bootstrap`
 
 Run the project with
 `npm run dev`
+
+Install dependencies:
+- `npm install`
+- `npm install react-bootstrap bootstrap`
+- `npm install --save @emailjs/browser`
 
 To correctly implement the contact form so that you can receive your guests' emails:
 - create an account with EmailJS (https://www.emailjs.com/)
@@ -12,9 +16,10 @@ To correctly implement the contact form so that you can receive your guests' ema
 - For more information about environment variables in Vite, see https://vitejs.dev/guide/env-and-mode
 
 
-***** default README below *****
 
-# React + TypeScript + Vite
+***** default Vite+TypeScript+React README below *****
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -23,7 +28,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 

@@ -1,26 +1,30 @@
 import './ContactForm.scss';
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 function ContactForm() {
-    const form = useRef();
+    const form = useRef(null);
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [object, setObject] = useState("");
     const [message, setMessage] = useState("");
 
-    const handleSubmit = (e : any) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
 
+        if (form.current == null) {
+            return
+        }
+
         emailjs
-            .sendForm('contact_service', 'contact_form', form.current, {publicKey: JSON.stringify(import.meta.env.VITE_API_KEY)})
+            .sendForm('contact_service', 'contact_form', form.current, import.meta.env.VITE_API_KEY)
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    alert("Email sent successfully");
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
+                    alert(`${error.message}`);
                 },
             );
     }

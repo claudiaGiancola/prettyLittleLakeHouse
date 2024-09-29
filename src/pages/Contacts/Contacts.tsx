@@ -1,5 +1,5 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+// import Button from 'react-bootstrap/Button';
+// import Form from 'react-bootstrap/Form';
 import ContactForm from '../../components/ContactForm/ContactForm';
 
 const Contacts = () => {
@@ -7,7 +7,7 @@ const Contacts = () => {
 
     return (
         <>
-        {/* <ContactForm/> */}
+        <ContactForm/>
 
         {/* <Form>
             <Form.Group className="mb-3" controlId="formName">
