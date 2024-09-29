@@ -4,6 +4,13 @@ To use this project install `npm install` and `npm install react-bootstrap boots
 Run the project with
 `npm run dev`
 
+To correctly implement the contact form so that you can receive your guests' emails:
+- create an account with EmailJS (https://www.emailjs.com/)
+- In your root directory, create a new file called `.env.local` to store your local environment variable
+- Inside this file, code `VITE_API_KEY=<your "public key">`
+- This value is referred in the ContactForm component at `JSON.stringify(import.meta.env.VITE_API_KEY)`
+- For more information about environment variables in Vite, see https://vitejs.dev/guide/env-and-mode
+
 
 ***** default README below *****
 
